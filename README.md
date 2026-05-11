@@ -29,6 +29,11 @@ make
 
 Com o executável gerado, rode o seguinte comando para iniciar a aplicação.
 
+```bash
+./labirinto
+
+```
+
 ### 4. Interação
 
 Agora, basta seguir as instruções apresentadas no **Menu Interativo** do terminal para carregar os arquivos e realizar os testes.
