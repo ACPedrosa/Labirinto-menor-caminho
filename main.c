@@ -1,0 +1,12 @@
+#include "header/arquivo.h"
+#include "header/grafo.h"
+#include "header/menu.h"
+
+
+int main(){
+    
+    cor_sistema();
+    menu();
+
+    return 0;
+}

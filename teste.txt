@@ -1,0 +1,14 @@
+ponto_inicial(a0).
+ponto_final(f0).
+orientado(s).
+
+aresta(a0,b0,95).
+aresta(a0,c0,44).
+aresta(a0,d0,98).
+aresta(a0,e0,49).
+aresta(b0,c0,60).
+aresta(b0,e0,31).
+aresta(b0,f0,44).
+aresta(d0,c0,32).
+aresta(d0,e0,28).
+aresta(d0,f0,34).
