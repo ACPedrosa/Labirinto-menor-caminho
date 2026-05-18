@@ -27,9 +27,8 @@ void menu(){
     vector<Aresta> arestas_vazias;
     Grafo grafo(false, arestas_vazias);
     Aresta aresta_template("", "", 0);
-    //No no("", "", 0, 0);
 
-    int op, comprimento_do_fio;
+    int op;
     string nome_arquivo;
 
     do{
@@ -44,6 +43,9 @@ void menu(){
                 {    
                     cout << "Digite o nome do arquivo de leitura (inclua o .txt ao final): ";
                     cin >> nome_arquivo;
+
+                    grafo.limpar_arestas();
+
                     cout << "Lendo arquivo de configuracao: " << nome_arquivo << "..." << endl;
                     if (!config_arquivo.ler_arquivo(nome_arquivo, grafo, config_arquivo, aresta_template)) {
                         cerr << "Erro fatal: Falha na leitura do arquivo de entrada." << endl;
@@ -57,18 +59,11 @@ void menu(){
             case 2:
                 {
 
-                    // string ponto_inicial = config_arquivo.get_ponto_inical();
-                    // string ponto_final = config_arquivo.get_ponto_final();
+                    string ponto_inicial = config_arquivo.get_ponto_inical();
+                    string ponto_final = config_arquivo.get_ponto_final();
 
-                    // cout << "Executando Algoritmo A* para encontrar o melhor caminho..." << endl;
-                    // auto start = chrono::high_resolution_clock::now();
-
-                    // no.algoritmo_a_estrela(grafo, ponto_inicial, ponto_final, comprimento_do_fio);
-
-                    // auto end = chrono::high_resolution_clock::now();
-                    // chrono::duration<double> elapsed = end - start;
-                    // cout << "Tempo de execucao " << elapsed.count() << " seconds\n";
-
+                    cout << "Executando Dijkstra para encontrar o melhor caminho..." << endl;
+                    grafo.dijkstra(config_arquivo.get_ponto_inical(), config_arquivo.get_ponto_final());
                 }
 
                 break;

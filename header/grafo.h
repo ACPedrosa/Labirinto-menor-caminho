@@ -6,6 +6,11 @@
 #include <fstream>
 #include <vector>
 #include <filesystem>
+#include <queue>
+#include <unordered_map>
+#include <unordered_set>
+#include <limits>
+#include <algorithm>
 
 using namespace std;
 
@@ -49,6 +54,11 @@ class Grafo{
         // Pré-condição: Os nomes dos vértices devem ser válidos (não vazios) e o custo deve ser um valor inteiro >= 0.
         // Pós-condição: A lista de arestas do grafo (`this->arestas`) conterá a nova aresta adicionada.
         void add_aresta(string inicio_aresta, string fim_aresta, int custo);
+
+        void limpar_arestas();
+
+        // Algoritmo de Dijkstra
+        void dijkstra(string origem, string destino);
 
 };
 

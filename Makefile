@@ -1,6 +1,6 @@
 CC = g++
 CFLAGS = -I header
-SRC = main.c src/arquivo.cpp src/grafo.cpp src/menu.c
+SRC = main.c src/arquivo.cpp src/grafo.cpp src/menu.cpp
 OBJ = labirinto
 
 all:
